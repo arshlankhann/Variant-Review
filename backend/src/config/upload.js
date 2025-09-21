@@ -2,7 +2,9 @@ const fs = require('fs');
 const multer = require('multer');
 const path = require('path');
 
-const uploadsRoot = path.join(__dirname, '..', '..', 'uploads');
+const isServerless = !!process.env.VERCEL;
+const defaultLocalDir = path.join(__dirname, '..', '..', 'uploads');
+const uploadsRoot = process.env.UPLOADS_DIR || (isServerless ? '/tmp/uploads' : defaultLocalDir);
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
