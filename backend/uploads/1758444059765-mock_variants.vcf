@@ -1,0 +1,22 @@
+##fileformat=VCFv4.3
+##fileDate=20250921
+##source=MockVariantGenerator
+##reference=GRCh38
+##phasing=none
+##INFO=<ID=GENE,Number=1,Type=String,Description="Gene symbol (mock)">
+##INFO=<ID=CLNSIG,Number=1,Type=String,Description="Clinical significance (mock ClinVar-like)">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele frequency (mock)">
+##INFO=<ID=CLASS,Number=1,Type=String,Description="Classification (ACMG-style, mock)">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read depth (mock)">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	SAMPLE
+3	37000000	rs121913530	A	G	100	PASS	GENE=MLH1;CLNSIG=Pathogenic;AF=0.002;CLASS=Likely_Pathogenic	GT:DP	0/1:48
+1	118000000	rs1801133	C	T	99	PASS	GENE=MTHFR;CLNSIG=Benign;AF=0.12;CLASS=Likely_Benign	GT:DP	0/1:35
+17	43000000	rs587776650	G	A	120	PASS	GENE=BRCA1;CLNSIG=Pathogenic;AF=0.0003;CLASS=Pathogenic	GT:DP	0/1:62
+7	117200000	rs80357669	T	C	120	PASS	GENE=CFTR;CLNSIG=Pathogenic;AF=0.02;CLASS=Pathogenic	GT:DP	1/1:77
+17	7570000	rs63751273	C	G	80	PASS	GENE=TP53;CLNSIG=Uncertain_Significance;AF=0.001;CLASS=Uncertain_Significance	GT:DP	0/1:29
+19	11200000	rs121908751	A	T	95	PASS	GENE=LDLR;CLNSIG=Likely_Pathogenic;AF=0.0008;CLASS=Likely_Pathogenic	GT:DP	0/1:52
+2	21200000	rs121964987	G	A	60	PASS	GENE=APOB;CLNSIG=Benign;AF=0.045;CLASS=Benign	GT:DP	0/0:40
+3	36950000	rs121913342	G	T	70	PASS	GENE=MLH1;CLNSIG=Likely_Benign;AF=0.014;CLASS=Likely_Benign	GT:DP	0/1:31
+13	32300000	rs587780345	C	T	110	PASS	GENE=BRCA2;CLNSIG=Pathogenic;AF=0.0005;CLASS=Pathogenic	GT:DP	0/1:58
+3	38600000	rs121908751	T	C	85	PASS	GENE=SCN5A;CLNSIG=Uncertain_Significance;AF=0.003;CLASS=Uncertain_Significance	GT:DP	0/1:27
