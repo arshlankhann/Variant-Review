@@ -10,8 +10,19 @@ const reportsRouter = require('./routes/reports');
 
 const app = express();
 
+const allowedOrigins = [
+  'http://localhost:5173',
+  process.env.FRONTEND_ORIGIN,
+];
 
-app.use(cors());
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.filter(Boolean).includes(origin)) return callback(null, true);
+    return callback(null, true); // fallback open; tighten if needed
+  },
+  credentials: false,
+}));
 app.use(express.json());
 
 app.get('/api/health', (req, res) => {
